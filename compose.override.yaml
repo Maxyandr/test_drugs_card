@@ -22,24 +22,6 @@ services:
 
 ###> symfony/mercure-bundle ###
 ###< symfony/mercure-bundle ###
-  
-  ###> doctrine/doctrine-bundle ###
-  test.database:
-    image: mysql:${MYSQL_VERSION:-8}
-    environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-app}
-      # You should definitely change the password in production
-      MYSQL_RANDOM_ROOT_PASSWORD: "true"
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-!ChangeMe!}
-      MYSQL_USER: ${MYSQL_USER:-app}
-    healthcheck:
-      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
-      timeout: 5s
-      retries: 5
-      start_period: 60s
-    volumes:
-      - ./docker/db/data:/var/lib/mysql:rw
-  ###< doctrine/doctrine-bundle ###
 
 ###> doctrine/doctrine-bundle ###
   database:
