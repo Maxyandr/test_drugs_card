@@ -20,3 +20,4 @@
 ###< phpunit/phpunit ###
 /docker/
 .idea/
+scraped/
