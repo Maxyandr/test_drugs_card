@@ -13,6 +13,6 @@
 3. In bash, you can run `composer scrape` to scrape data from the website
 
 ## Available localhost endpoints
-1. `GET https://localhost/product` - get all scraped data
-2. `GET https://localhost/product/{id}` - get specific product by id
+1. [GET https://localhost/product](https://localhost/product) - get all scraped data
+2. [GET https://localhost/product/{id}](https://localhost/product/1) - get specific product by id
 3. `DELETE https://localhost/product/{id}` - delete specific product by id
